@@ -37,11 +37,11 @@ router.get('/:id',async (req, res) => {
       include: [
         {
           model: Product,
-          attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+          attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
       },
     ],
   });
-      if (!TagData) {
+      if (!tagData) {
       res.status(404).json({message: 'No tag found with that id'});
       return;
     }
