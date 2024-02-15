@@ -75,12 +75,7 @@ router.post("/", (req, res) => {
     }
   */
    Product.create(req.body, {
-    where: {
-      product_name: req.body.product_name,
-      price: 25.00,
-      stock: 9,
-      tagIds: [1, 2, 3, 4],
-    },
+    
 
 })
     .then((product) => {
